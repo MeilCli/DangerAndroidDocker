@@ -9,6 +9,6 @@ WORKDIR $APP_HOME
 COPY ./Gemfile $APP_HOME/Gemfile
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends make g++ && \
+    apt-get install -y --no-install-recommends make g++ git && \
     bundle install && \
     rm -rf /usr/local/bundle/cache/* /usr/local/share/.cache/* /var/cache/* /tmp/* /var/lib/apt/lists/*
